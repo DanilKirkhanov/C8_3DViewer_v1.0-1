@@ -13,7 +13,7 @@ START_TEST(file_open_fail) {
 END_TEST
 
 START_TEST(file_open_ok) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   int status = open_obj_file(file_name, &f);  // Act
   ck_assert_int_eq(SUCCESS, status);          // Accert
@@ -23,7 +23,7 @@ START_TEST(file_open_ok) {
 END_TEST
 
 START_TEST(count_vtx_fct) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
@@ -39,7 +39,7 @@ START_TEST(count_vtx_fct) {
 END_TEST
 
 START_TEST(read_vertexes) {
-  char *file_name = "data-samples/cube.obj";          // Arrange
+  char *file_name = "data-samples/cube.txt";          // Arrange
   FILE *f = NULL;                                     // Arrange
   obj3d res;                                          // Arrange
   int status = open_obj_file(file_name, &f);          // Act
@@ -103,7 +103,7 @@ END_TEST
 /*-----------------------------parse functions------------------*/
 START_TEST(fill_obj3d_verteces) {
   // char *buffer = "v -426.750397 4550.81408 2637.903854 ";  // Arrange
-  char *file_name = "data-samples/deer.obj";  // Arrange
+  char *file_name = "data-samples/deer.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d obj;                                  // Arrange
   obj.vtx_count = 772;
@@ -174,7 +174,7 @@ START_TEST(parse_vertices_ok) {
 END_TEST
 
 START_TEST(move) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
@@ -221,7 +221,7 @@ START_TEST(move) {
 END_TEST
 
 START_TEST(rescale) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
@@ -287,7 +287,7 @@ START_TEST(rescale) {
 END_TEST
 
 START_TEST(rotateX_test) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
@@ -330,7 +330,7 @@ START_TEST(rotateX_test) {
 END_TEST
 
 START_TEST(rotateZ_test) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
@@ -374,7 +374,7 @@ START_TEST(rotateZ_test) {
 END_TEST
 
 START_TEST(rotateY_test) {
-  char *file_name = "data-samples/cube.obj";  // Arrange
+  char *file_name = "data-samples/cube.txt";  // Arrange
   FILE *f = NULL;                             // Arrange
   obj3d res;                                  // Arrange
   int status = open_obj_file(file_name, &f);  // Act
