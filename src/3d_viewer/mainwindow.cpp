@@ -94,6 +94,11 @@ void MainWindow::choisefile() {
   if (!ui->openGLWidget->flag) read_obj(f, &ui->openGLWidget->model);
   calc_centers(&ui->openGLWidget->model);
   fclose(f);
+  ui->label_path->setText(file);
+  double num = ui->openGLWidget->model.vtx_count;
+  ui->label_vct->setText(QString::number(num, 'd'));
+  num = ui->openGLWidget->model.fct_count;
+  ui->label_fct->setText(QString::number(num, 'd'));
 }
 
 void MainWindow::rgb_changed() {
