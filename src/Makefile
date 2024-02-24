@@ -21,9 +21,9 @@ recreate_build_dir:
 	@rm -rf build
 	@mkdir build
 
-dist:
+dist: install
 	@rm -rf dist.tar.gz
-	@tar -cvzf dist.tar.gz build/3dviewer.app
+	@tar -cvzf dist.tar.gz build/3d_viewer.app
 
 uninstall: 
 	@rm -rf build

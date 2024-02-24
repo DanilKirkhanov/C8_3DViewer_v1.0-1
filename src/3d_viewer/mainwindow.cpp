@@ -20,7 +20,6 @@ MainWindow::MainWindow(QWidget *parent)
   ui->openGLWidget->b_point = 0;
   ui->openGLWidget->projection_flag = 0;
 
-
   load_settings();
   apply_settings();
 
